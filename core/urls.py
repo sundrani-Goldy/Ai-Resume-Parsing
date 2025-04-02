@@ -24,15 +24,16 @@ from django.contrib.staticfiles.urls import static, staticfiles_urlpatterns
 from django.urls import include
 import os
 from dotenv import load_dotenv
+from api.views import CandidateProfileViewSet, JobPostingViewSet, JobMatchViewSet, CoverLetterViewSet
 
 
 load_dotenv()
 
 schema_view = get_schema_view(
     openapi.Info(
-        title="Excel To Database API",
+        title="AI Resume Parsing API",
         default_version='v1',
-        description="Excel To Database API",
+        description="AI Resume Parsing API",
     ),
     public=True,
     permission_classes=[permissions.AllowAny],
@@ -40,7 +41,10 @@ schema_view = get_schema_view(
 )
 
 router = routers.DefaultRouter()
-
+router.register("candidates", CandidateProfileViewSet)
+router.register("jobs", JobPostingViewSet)
+router.register("matches", JobMatchViewSet)
+router.register("coverletters", CoverLetterViewSet, basename='coverletter')
 re_path(
     r'^swagger(?P<format>\.json|\.yaml)$',
     schema_view.without_ui(cache_timeout=0),

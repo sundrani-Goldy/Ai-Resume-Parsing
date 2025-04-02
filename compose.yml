@@ -19,11 +19,17 @@ services:
     env_file:
       - .env
     build: .
-    command: python manage.py runserver 0.0.0.0:8000
+    command: >
+      sh -c "python manage.py wait_for_db &&
+             python manage.py migrate &&
+             python manage.py populate_job_postings &&
+             python manage.py runserver 0.0.0.0:8000 & 
+             streamlit run streamlit_app.py --server.port 8501 --server.address 0.0.0.0"
     volumes:
       - .:/app
     ports:
-      - "127.0.0.1:8000:8000"
+      - "127.0.0.1:8000:8000"  # Django API
+      - "127.0.0.1:8501:8501"  # Streamlit frontend
     depends_on:
       db:
         condition: service_healthy

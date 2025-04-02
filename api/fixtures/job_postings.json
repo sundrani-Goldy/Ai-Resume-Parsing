@@ -1,0 +1,38 @@
+[
+    {
+        "model": "api.jobposting",
+        "fields": {
+            "title": "Python Developer",
+            "company": "Tech Solutions Inc",
+            "required_skills": [
+                "Python",
+                "Django",
+                "REST APIs",
+                "SQL",
+                "Git",
+                "Docker",
+                "AWS",
+                "Unit Testing"
+            ],
+            "description": "We are seeking an experienced Python Developer with 2-4 years of experience to join our team. The ideal candidate will have strong experience in developing web applications using Python and Django framework.\n\nKey Responsibilities:\n- Develop and maintain web applications using Python and Django\n- Design and implement RESTful APIs\n- Write clean, maintainable, and efficient code\n- Collaborate with cross-functional teams\n- Participate in code reviews and technical discussions\n- Debug and fix issues in existing applications\n\nRequirements:\n- 2-4 years of experience in Python development\n- Strong knowledge of Django framework\n- Experience with REST APIs and microservices\n- Understanding of SQL databases\n- Familiarity with Git and version control\n- Experience with Docker and AWS is a plus\n- Strong problem-solving skills and attention to detail"
+        }
+    },
+    {
+        "model": "api.jobposting",
+        "fields": {
+            "title": "Business Development Executive",
+            "company": "Growth Ventures Ltd",
+            "required_skills": [
+                "Sales",
+                "Business Development",
+                "Client Relationship",
+                "Market Research",
+                "Negotiation",
+                "Presentation Skills",
+                "CRM",
+                "Strategic Planning"
+            ],
+            "description": "We are looking for a dynamic Business Development Executive with 2-4 years of experience to drive our company's growth. The ideal candidate will be responsible for identifying new business opportunities and building strong client relationships.\n\nKey Responsibilities:\n- Identify and pursue new business opportunities\n- Build and maintain client relationships\n- Develop and implement sales strategies\n- Conduct market research and competitor analysis\n- Prepare and deliver presentations to potential clients\n- Negotiate and close deals\n- Meet or exceed sales targets\n\nRequirements:\n- 2-4 years of experience in business development or sales\n- Strong communication and presentation skills\n- Proven track record of meeting sales targets\n- Experience with CRM systems\n- Excellent negotiation skills\n- Ability to work independently and as part of a team\n- Bachelor's degree in Business, Marketing, or related field"
+        }
+    }
+] 
